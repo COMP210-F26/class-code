@@ -61,11 +61,7 @@ public abstract class MyListTest {
 
     // ----- add(E elem) -----
 
-    @Test
-    @DisplayName("add(elem): returns true")
-    void addReturnsTrue() {
-        assertTrue(list.add("Waddy"));
-    }
+
 
     @Test
     @DisplayName("add(elem): appends to the end, keeping order")

@@ -24,7 +24,7 @@ public interface MyList<E> {
      * @param elem the element to add
      * @return true once the element has been added
      */
-    boolean add(E elem);
+    void add(E elem);
 
     /**
      * Inserts an element at the given index. The element already at that
