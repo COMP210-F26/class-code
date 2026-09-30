@@ -6,9 +6,9 @@ public interface Node<E>{
 
     void setValue(E value);
 
-    Node getNext();
+    Node<E> getNext();
 
-    void setNext(Node next);
+    void setNext(Node<E> next);
 
     default boolean hasNext() {
         return (getNext() != null);
