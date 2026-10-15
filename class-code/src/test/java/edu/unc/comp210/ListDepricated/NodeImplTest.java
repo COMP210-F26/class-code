@@ -1,4 +1,4 @@
-package edu.unc.comp210.List;
+package edu.unc.comp210.ListDepricated;
 
 import org.junit.jupiter.api.Test;
 

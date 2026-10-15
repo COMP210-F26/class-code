@@ -1,4 +1,4 @@
-package edu.unc.comp210.List;
+package edu.unc.comp210.ListDepricated;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;

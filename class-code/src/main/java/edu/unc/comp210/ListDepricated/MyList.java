@@ -1,4 +1,4 @@
-package edu.unc.comp210.List;
+package edu.unc.comp210.ListDepricated;
 
 /**
  * A simple list of elements stored in order and accessed by index.

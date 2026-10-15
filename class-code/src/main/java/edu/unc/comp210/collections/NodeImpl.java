@@ -1,4 +1,4 @@
-package edu.unc.comp210.List;
+package edu.unc.comp210.collections;
 
 public class NodeImpl<E> implements Node<E> {
     private E value;

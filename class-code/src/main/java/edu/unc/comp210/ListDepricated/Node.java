@@ -1,4 +1,4 @@
-package edu.unc.comp210.List;
+package edu.unc.comp210.ListDepricated;
 
 public interface Node<E>{
 

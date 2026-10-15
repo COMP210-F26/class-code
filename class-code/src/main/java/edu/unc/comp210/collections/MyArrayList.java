@@ -1,16 +1,15 @@
-package edu.unc.comp210.List;
+package edu.unc.comp210.collections;
 
 public class MyArrayList<E> implements MyList<E> {
     private static final int INITIAL_CAPACITY=10;
 
     private E[] data;
-    int size;
+    private int size;
 
     public MyArrayList(){
         this.data = (E[])(new Object[INITIAL_CAPACITY]);
         this.size = 0;
     }
-
 
     @Override
     public int size() {
@@ -18,8 +17,9 @@ public class MyArrayList<E> implements MyList<E> {
     }
 
     @Override
-    public void add(E elem) {
+    public boolean add(E elem) {
         add(size,elem);
+        return true;
     }
 
     @Override
@@ -50,7 +50,6 @@ public class MyArrayList<E> implements MyList<E> {
         //grab return item
         E removed = data[idx];
 
-
         //Shift everything to the left to remove blank spot
         for(int i=idx;i<size-1; i++){
             data[i] = data[i+1];
@@ -80,6 +79,21 @@ public class MyArrayList<E> implements MyList<E> {
         return -1;
     }
 
+    @Override
+    public boolean remove(E elem) {
+        int idx = indexOf(elem);
+        if(idx == -1){
+            return false; // nothing to remove
+        }
+        remove(idx);
+        return true;
+    }
+
+    @Override
+    public boolean contains(E elem) {
+        return indexOf(elem) != -1;
+    }
+
     private void grow(){
         //create an array that is double the size
         E[] bigger = (E[]) new Object[this.data.length*2];
@@ -89,5 +103,18 @@ public class MyArrayList<E> implements MyList<E> {
         }
         //set it as an instance variable.
         this.data = bigger;
+    }
+
+    @Override
+    public String toString(){
+        String result = "[";
+        for(int i=0; i<size; i++){
+            if(i > 0){
+                result += ", ";
+            }
+            result += this.data[i];
+        }
+        result += "]";
+        return result;
     }
 }
